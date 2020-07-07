@@ -38,12 +38,7 @@ export default (env, args) => {
         use: [{
           loader: 'babel-loader',
           options: {
-            presets: [['@babel/preset-env', {
-              targets: ['ie 11'],
-              useBuiltIns: 'entry',
-              corejs: 3,
-              debug: true,
-            }]],
+            caller: { target: 'ie11' },
           },
         }],
       }, ...rules.slice(1)],
